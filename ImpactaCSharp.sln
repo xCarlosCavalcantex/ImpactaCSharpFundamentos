@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap2.Visual", "CSharp.Cap2.Visual\CSharp.Cap2.Visual.csproj", "{222EC20F-8F4E-4007-BD64-FCF57D7BDF9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp.Cap3.Variaveis", "Csharp.Cap3.Variaveis\Csharp.Cap3.Variaveis.csproj", "{4B2D9DD6-924D-470C-838E-88D18B0F79AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap3.Troco", "CSharp.Cap3.Troco\CSharp.Cap3.Troco.csproj", "{AB8606D2-0A7A-4777-98E5-745594EC1ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{222EC20F-8F4E-4007-BD64-FCF57D7BDF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{222EC20F-8F4E-4007-BD64-FCF57D7BDF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{222EC20F-8F4E-4007-BD64-FCF57D7BDF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2D9DD6-924D-470C-838E-88D18B0F79AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2D9DD6-924D-470C-838E-88D18B0F79AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2D9DD6-924D-470C-838E-88D18B0F79AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2D9DD6-924D-470C-838E-88D18B0F79AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

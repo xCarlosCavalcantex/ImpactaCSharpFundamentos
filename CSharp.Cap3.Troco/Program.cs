@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharp.Cap2.Visual
+namespace CSharp.Cap3.Troco
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CSharp.Cap2.Visual
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VisulForm());
+            Application.Run(new TrocoForm());
         }
     }
 }
