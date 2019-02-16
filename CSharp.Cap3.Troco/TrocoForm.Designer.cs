@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrocoForm));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, 5, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
@@ -42,17 +41,19 @@
             ""}, 1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 14.25F));
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, 0, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 14.25F));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrocoForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.valorCompraTextBox = new System.Windows.Forms.TextBox();
-            this.valorPagoTextBox = new System.Windows.Forms.TextBox();
-            this.trocoTextBox = new System.Windows.Forms.TextBox();
             this.calcularButton = new System.Windows.Forms.Button();
+            this.trocoTextBox = new System.Windows.Forms.TextBox();
+            this.valorPagoTextBox = new System.Windows.Forms.TextBox();
+            this.valorCompraTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.coinsImageList = new System.Windows.Forms.ImageList(this.components);
             this.coinsListView = new System.Windows.Forms.ListView();
+            this.coinsImageList = new System.Windows.Forms.ImageList(this.components);
+            this.cleanField = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.cleanField);
             this.groupBox1.Controls.Add(this.calcularButton);
             this.groupBox1.Controls.Add(this.trocoTextBox);
             this.groupBox1.Controls.Add(this.valorPagoTextBox);
@@ -75,23 +77,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Valores";
             // 
-            // label1
+            // calcularButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Valor da compra:";
+            this.calcularButton.Location = new System.Drawing.Point(9, 127);
+            this.calcularButton.Name = "calcularButton";
+            this.calcularButton.Size = new System.Drawing.Size(201, 23);
+            this.calcularButton.TabIndex = 6;
+            this.calcularButton.Text = "&Calcular";
+            this.calcularButton.UseVisualStyleBackColor = true;
+            this.calcularButton.Click += new System.EventHandler(this.calcularButton_Click);
             // 
-            // label2
+            // trocoTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Valor pago: ";
+            this.trocoTextBox.Location = new System.Drawing.Point(99, 88);
+            this.trocoTextBox.Name = "trocoTextBox";
+            this.trocoTextBox.ReadOnly = true;
+            this.trocoTextBox.Size = new System.Drawing.Size(111, 20);
+            this.trocoTextBox.TabIndex = 5;
+            // 
+            // valorPagoTextBox
+            // 
+            this.valorPagoTextBox.Location = new System.Drawing.Point(99, 60);
+            this.valorPagoTextBox.Name = "valorPagoTextBox";
+            this.valorPagoTextBox.Size = new System.Drawing.Size(111, 20);
+            this.valorPagoTextBox.TabIndex = 3;
+            // 
+            // valorCompraTextBox
+            // 
+            this.valorCompraTextBox.Location = new System.Drawing.Point(99, 32);
+            this.valorCompraTextBox.Name = "valorCompraTextBox";
+            this.valorCompraTextBox.Size = new System.Drawing.Size(111, 20);
+            this.valorCompraTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -102,37 +118,23 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Troco:";
             // 
-            // valorCompraTextBox
+            // label2
             // 
-            this.valorCompraTextBox.Location = new System.Drawing.Point(99, 32);
-            this.valorCompraTextBox.Name = "valorCompraTextBox";
-            this.valorCompraTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorCompraTextBox.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Valor pago: ";
             // 
-            // valorPagoTextBox
+            // label1
             // 
-            this.valorPagoTextBox.Location = new System.Drawing.Point(99, 60);
-            this.valorPagoTextBox.Name = "valorPagoTextBox";
-            this.valorPagoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorPagoTextBox.TabIndex = 3;
-            // 
-            // trocoTextBox
-            // 
-            this.trocoTextBox.Location = new System.Drawing.Point(99, 88);
-            this.trocoTextBox.Name = "trocoTextBox";
-            this.trocoTextBox.ReadOnly = true;
-            this.trocoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.trocoTextBox.TabIndex = 5;
-            // 
-            // calcularButton
-            // 
-            this.calcularButton.Location = new System.Drawing.Point(9, 127);
-            this.calcularButton.Name = "calcularButton";
-            this.calcularButton.Size = new System.Drawing.Size(201, 23);
-            this.calcularButton.TabIndex = 6;
-            this.calcularButton.Text = "&Calcular";
-            this.calcularButton.UseVisualStyleBackColor = true;
-            this.calcularButton.Click += new System.EventHandler(this.calcularButton_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Valor da compra:";
             // 
             // groupBox2
             // 
@@ -146,17 +148,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Coins";
-            // 
-            // coinsImageList
-            // 
-            this.coinsImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("coinsImageList.ImageStream")));
-            this.coinsImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.coinsImageList.Images.SetKeyName(0, "1.png");
-            this.coinsImageList.Images.SetKeyName(1, "5.png");
-            this.coinsImageList.Images.SetKeyName(2, "10.png");
-            this.coinsImageList.Images.SetKeyName(3, "25.png");
-            this.coinsImageList.Images.SetKeyName(4, "50.png");
-            this.coinsImageList.Images.SetKeyName(5, "100.png");
             // 
             // coinsListView
             // 
@@ -174,6 +165,27 @@
             this.coinsListView.Size = new System.Drawing.Size(471, 377);
             this.coinsListView.TabIndex = 0;
             this.coinsListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // coinsImageList
+            // 
+            this.coinsImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("coinsImageList.ImageStream")));
+            this.coinsImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.coinsImageList.Images.SetKeyName(0, "1.png");
+            this.coinsImageList.Images.SetKeyName(1, "5.png");
+            this.coinsImageList.Images.SetKeyName(2, "10.png");
+            this.coinsImageList.Images.SetKeyName(3, "25.png");
+            this.coinsImageList.Images.SetKeyName(4, "50.png");
+            this.coinsImageList.Images.SetKeyName(5, "100.png");
+            // 
+            // cleanField
+            // 
+            this.cleanField.Location = new System.Drawing.Point(9, 157);
+            this.cleanField.Name = "cleanField";
+            this.cleanField.Size = new System.Drawing.Size(201, 23);
+            this.cleanField.TabIndex = 7;
+            this.cleanField.Text = "Limpa";
+            this.cleanField.UseVisualStyleBackColor = true;
+            this.cleanField.Click += new System.EventHandler(this.cleanField_Click);
             // 
             // TrocoForm
             // 
@@ -206,6 +218,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ImageList coinsImageList;
         private System.Windows.Forms.ListView coinsListView;
+        private System.Windows.Forms.Button cleanField;
     }
 }
 

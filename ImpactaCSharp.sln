@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp.Cap3.Variaveis", "Cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap3.Troco", "CSharp.Cap3.Troco\CSharp.Cap3.Troco.csproj", "{AB8606D2-0A7A-4777-98E5-745594EC1ABD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap4.Frete", "CSharp.Cap4.Frete\CSharp.Cap4.Frete.csproj", "{356AAD3A-A578-475D-B195-C9C7937D2CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB8606D2-0A7A-4777-98E5-745594EC1ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356AAD3A-A578-475D-B195-C9C7937D2CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356AAD3A-A578-475D-B195-C9C7937D2CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356AAD3A-A578-475D-B195-C9C7937D2CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356AAD3A-A578-475D-B195-C9C7937D2CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
