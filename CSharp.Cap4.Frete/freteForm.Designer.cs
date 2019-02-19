@@ -141,6 +141,7 @@
             this.limpaButton.TabIndex = 11;
             this.limpaButton.Text = "Limpar";
             this.limpaButton.UseVisualStyleBackColor = true;
+            this.limpaButton.Click += new System.EventHandler(this.limpaButton_Click);
             // 
             // totalLabel
             // 
@@ -154,8 +155,10 @@
             // 
             // freteForm
             // 
+            this.AcceptButton = this.calcularButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.limpaButton;
             this.ClientSize = new System.Drawing.Size(327, 301);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.limpaButton);

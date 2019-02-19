@@ -53,8 +53,12 @@ namespace CSharp.Cap4.Frete
                     percentual = 0.75m;
                     break;
             }
+
+            freteTextBox.Text = percentual.ToString("P1");
+            totalLabel.Text = ((percentual * valor)+ valor).ToString("C");
         }
 
+        
         private List<string> ValidarFormulario()
         {
             var erros = new List<string>();
@@ -76,6 +80,15 @@ namespace CSharp.Cap4.Frete
             if (ufComboBox.SelectedIndex == -1)
                 erros.Add("Selecione uma UF!");
             return erros;
+        }
+
+        private void limpaButton_Click(object sender, EventArgs e)
+        {
+            clienteTextBox.Clear();
+            valorTextBox.ResetText();
+            freteTextBox.Text = null;
+            totalLabel.Text = string.Empty;
+            ufComboBox.SelectedIndex = -1;
         }
     }
 }
