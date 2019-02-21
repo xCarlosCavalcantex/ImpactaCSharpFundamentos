@@ -17,6 +17,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap8.VetoresTest", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap9.Colecoes.Test", "CSharp.Cap9.Colecoes.Test\CSharp.Cap9.Colecoes.Test.csproj", "{4290305C-430C-48EF-B905-43F7E7A841DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oficina", "Oficina", "{F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}"
+	ProjectSection(SolutionItems) = preProject
+		Oficina.Repositorios.SistemaArquivosTests\CorRepositorioTests.cs = Oficina.Repositorios.SistemaArquivosTests\CorRepositorioTests.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Dominio", "Oficina.Dominio\Oficina.Dominio.csproj", "{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SistemaArquivos", "Oficina.Repositorios.SistemaArquivos\Oficina.Repositorios.SistemaArquivos.csproj", "{1D163C78-EB41-40A8-9F63-F3E1C9DC6881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SistemaArquivosTests", "Oficina.Repositorios.SistemaArquivosTests\Oficina.Repositorios.SistemaArquivosTests.csproj", "{772C25A7-D64A-4430-9E3D-6F2D15606094}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,8 +62,25 @@ Global
 		{4290305C-430C-48EF-B905-43F7E7A841DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4290305C-430C-48EF-B905-43F7E7A841DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4290305C-430C-48EF-B905-43F7E7A841DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772C25A7-D64A-4430-9E3D-6F2D15606094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772C25A7-D64A-4430-9E3D-6F2D15606094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772C25A7-D64A-4430-9E3D-6F2D15606094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772C25A7-D64A-4430-9E3D-6F2D15606094}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5F00A8D-1DFD-4F3C-8162-0BFE24F8DAAD} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
+		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
+		{772C25A7-D64A-4430-9E3D-6F2D15606094} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 	EndGlobalSection
 EndGlobal
