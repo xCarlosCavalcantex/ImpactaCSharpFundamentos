@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.Sistem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WinForm", "Oficina.WinForm\Oficina.WinForm.csproj", "{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Valida", "Impacta.Valida\Impacta.Valida.csproj", "{3B124E04-B20F-4F81-BA00-912A576D5F92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B124E04-B20F-4F81-BA00-912A576D5F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B124E04-B20F-4F81-BA00-912A576D5F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B124E04-B20F-4F81-BA00-912A576D5F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B124E04-B20F-4F81-BA00-912A576D5F92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +95,6 @@ Global
 		{1D163C78-EB41-40A8-9F63-F3E1C9DC6881} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 		{772C25A7-D64A-4430-9E3D-6F2D15606094} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 		{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
+		{3B124E04-B20F-4F81-BA00-912A576D5F92} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 	EndGlobalSection
 EndGlobal

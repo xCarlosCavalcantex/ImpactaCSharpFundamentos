@@ -82,6 +82,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Impacta.Valida\Impacta.Valida.csproj">
+      <Project>{3b124e04-b20f-4f81-ba00-912a576d5f92}</Project>
+      <Name>Impacta.Valida</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
       <Project>{a5f00a8d-1dfd-4f3c-8162-0bfe24f8daad}</Project>
       <Name>Oficina.Dominio</Name>
