@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,13 +44,59 @@ namespace Oficina.WinForm
 
         private void gravarButton_Click(object sender, EventArgs e)
         {
-            var formulario = new Formulario();
+            //var formulario = new Formulario();
 
-            if (formulario.Validar(this, veiculoErrorProvider))
+            if (Formulario.Validar(this, veiculoErrorProvider))
             {
+                try
+                {
+                    GravarVeiculo();
 
+                    MessageBox.Show("Veiculo gravado com sucesso !");
+
+                    Formulario.Limpar(this);
+
+                    placaMaskedTextBox.Focus();
+                }
+
+                catch (DirectoryNotFoundException)
+                {
+
+                    MessageBox.Show("Uma parte do caminho do arquivo de Veiculo não foi encontrada. A gravação não foi realizada");
+                }
+                catch (FileNotFoundException)
+                {
+                    MessageBox.Show("O arquivo de Veiculo não foi encontrada. A gravação não foi realizada");
+                }
+
+                catch (UnauthorizedAccessException)
+                {
+                    MessageBox.Show("O arquivo .xml não tem permissão de gravação.");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("500");
+                    //log4Net
+                }
             }
 
+        }
+
+        private void GravarVeiculo()
+        {
+            
+                var veiculo = new Veiculo();
+
+                veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
+                veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
+                veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
+                veiculo.Cor = (Cor)corComboBox.SelectedItem;
+                veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
+                veiculo.Observacao = obsTextBox.Text;
+                veiculo.Placa = placaMaskedTextBox.Text;
+
+                new VeiculoRepositorio().Inserir(veiculo);
+            
         }
 
         private void marcaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,6 +114,11 @@ namespace Oficina.WinForm
             modeloComboBox.DisplayMember = "Nome";
             modeloComboBox.ValueMember = "Id";
             modeloComboBox.SelectedIndex = -1;
+        }
+
+        private void obsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            obsGroupBox.Text = $"Observação ({obsTextBox.MaxLength - obsTextBox.Text.Length})";
         }
     }
 }

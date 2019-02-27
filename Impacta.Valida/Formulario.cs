@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Impacta.Valida
 {
-    public class Formulario
+    public static class Formulario
     {
-        public bool Validar(Form formulario, ErrorProvider provedorErro)
+        public static bool Validar(Form formulario, ErrorProvider provedorErro)
         {
 
             foreach (Control controle in formulario.Controls)
@@ -34,20 +34,44 @@ namespace Impacta.Valida
             }
 
 
-            return FormularioEstaSemErros(formulario, provedorErro);
+            //return FormularioEstaSemErros(formulario, provedorErro);
+            return !provedorErro.PossuiErro(formulario);
         }
 
-        private bool FormularioEstaSemErros(Form formulario, ErrorProvider provedorErro)
+
+        /// <summary>
+        /// Metado usado para limpar o formulário.
+        /// </summary>
+        /// <param name="controle">Formulario a ser limpo</param>
+
+        public static void Limpar(Control controle)
+        {
+            foreach (Control ctrl in controle.Controls)
+            {
+                if (ctrl is TextBox || ctrl is MaskedTextBox)
+                {
+                    ctrl.ResetText();
+                }
+                else if(ctrl is ComboBox)
+                {
+                    ((ComboBox)ctrl).SelectedIndex = -1;
+                }
+
+                Limpar(ctrl);
+            }
+        }
+
+        private static bool PossuiErro(this ErrorProvider provedorErro, Form formulario)
         {
             foreach (Control controle in formulario.Controls)
             {
                 if (provedorErro.GetError(controle) != string.Empty)
                 {
-                    return false;
+                    return true;
                 }
             }
 
-            return true;
+            return false;
         }
 
         private static void DefinirError(ErrorProvider provedorErro, Control controle, string mensagem)
@@ -56,7 +80,7 @@ namespace Impacta.Valida
             controle.Focus();
         }
 
-        private void ValidarTipoDado(Control controle, ErrorProvider provedorErro)
+        private static void ValidarTipoDado(Control controle, ErrorProvider provedorErro)
         {
             var controleTag = controle.Tag.ToString().ToUpper();
 
@@ -78,5 +102,6 @@ namespace Impacta.Valida
                 }
             }
         }
+       
     }
 }
