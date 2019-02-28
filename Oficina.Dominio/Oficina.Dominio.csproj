@@ -41,12 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cambio.cs" />
+    <Compile Include="Caminhao.cs" />
+    <Compile Include="Carroceria.cs" />
     <Compile Include="Combustivel.cs" />
     <Compile Include="Cor.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="Motocicleta.cs" />
+    <Compile Include="QtdEixos.cs" />
+    <Compile Include="TipoMotocicleta.cs" />
     <Compile Include="Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeiculoPasseio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Veiculo.cd" />

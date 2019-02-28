@@ -9,6 +9,8 @@ using System.Configuration;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
+    // ToDo: OO - Polimorfismo
+
     public class CorRepositorio
     {
         private string caminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];

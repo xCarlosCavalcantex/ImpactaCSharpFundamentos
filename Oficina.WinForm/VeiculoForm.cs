@@ -50,6 +50,7 @@ namespace Oficina.WinForm
             {
                 try
                 {
+
                     GravarVeiculo();
 
                     MessageBox.Show("Veiculo gravado com sucesso !");
@@ -73,10 +74,10 @@ namespace Oficina.WinForm
                 {
                     MessageBox.Show("O arquivo .xml não tem permissão de gravação.");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     MessageBox.Show("500");
-                    //log4Net
+                    log4net.LogManager.GetLogger(nameof(veiculoForm)).Error(ex.Message, ex);
                 }
             }
 
@@ -85,10 +86,11 @@ namespace Oficina.WinForm
         private void GravarVeiculo()
         {
             
-                var veiculo = new Veiculo();
+                var veiculo = new VeiculoPasseio();
 
                 veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
                 veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
+                veiculo.Carroceria = Carroceria.Hatch;
                 veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
                 veiculo.Cor = (Cor)corComboBox.SelectedItem;
                 veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;

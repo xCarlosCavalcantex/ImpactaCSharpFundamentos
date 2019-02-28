@@ -15,19 +15,20 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void InserirTest()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
-            veiculo.Placa ="KCT-1234";
+            veiculo.Placa ="kct-1234";
             veiculo.Cor = new CorRepositorio().Selecionar(1);
             veiculo.Ano = 2014;
             veiculo.Cambio = Cambio.Manual;
+            veiculo.Carroceria = Carroceria.Hatch;
             veiculo.Combustivel = Combustivel.Gasolina;
             veiculo.Modelo = new ModeloRepositorio().Selecionar(1);
             veiculo.Observacao = "Herbie 53";
-            
-            
 
          new VeiculoRepositorio().Inserir(veiculo);
+
+            Assert.AreEqual(veiculo.Placa, "KCT-1234");
 
         }
     }
