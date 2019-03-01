@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Oficina.Dominio.Cor" Collapsed="true">
-    <Position X="3.5" Y="6.75" Width="1.5" />
+    <Position X="3.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Cor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oficina.Dominio.Marca" Collapsed="true">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+    <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Marca.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oficina.Dominio.Modelo" Collapsed="true">
-    <Position X="3.5" Y="2.75" Width="1.5" />
+    <Position X="6.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Modelo.cs</FileName>
@@ -25,30 +25,81 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Oficina.Dominio.Veiculo">
-    <Position X="3.5" Y="4.25" Width="1.5" />
+    <Position X="3.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IACCAAAAAAAAAAAAAAAACAAAAEEAAAAAAAgAAAAAAgA=</HashCode>
+      <HashCode>JACCAAAAAAAAAAAAAAAACAAAAEEAAQBAAAgAAAAAAgA=</HashCode>
       <FileName>Veiculo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Cambio" />
-      <Property Name="Combustivel" />
       <Property Name="Cor" />
       <Property Name="Modelo" />
+      <Property Name="Combustivel" />
+      <Property Name="Cambio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oficina.Dominio.Caminhao">
+    <Position X="1.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Caminhao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Eixos" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oficina.Dominio.Motocicleta">
+    <Position X="3.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Motocicleta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tipo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oficina.Dominio.VeiculoPasseio">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>VeiculoPasseio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Carroceria" />
     </ShowAsAssociation>
   </Class>
   <Enum Name="Oficina.Dominio.Cambio" Collapsed="true">
-    <Position X="6.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAACAAAAAAAAAAAAAAAQAAAAAAAAAAQAAA=</HashCode>
       <FileName>Cambio.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Oficina.Dominio.Combustivel" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAEAAgAAAQAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Combustivel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Oficina.Dominio.Carroceria" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAgAAAAAAEAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Carroceria.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Oficina.Dominio.QtdEixos" Collapsed="true">
+    <Position X="1.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QtdEixos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Oficina.Dominio.TipoMotocicleta" Collapsed="true">
+    <Position X="3.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAABIAAAAAAAg=</HashCode>
+      <FileName>TipoMotocicleta.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

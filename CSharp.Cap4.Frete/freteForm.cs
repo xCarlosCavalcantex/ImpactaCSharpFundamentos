@@ -22,43 +22,32 @@ namespace CSharp.Cap4.Frete
             var erros = ValidarFormulario();
 
             if (erros.Count == 0)
-                Calcular();
+            { 
+
+                var frete = new Frete (new UF { Sigla = ufComboBox.Text }, Convert.ToDecimal(valorTextBox.Text));
+
+                frete.Cliente = new Cliente();
+                frete.Cliente.Nome = clienteTextBox.Text;
+
+                frete.UF = new UF {Sigla = ufComboBox.Text };
+                frete.Valor = Convert.ToDecimal(valorTextBox.Text);
+
+                //frete.Calcular();
+
+                freteTextBox.Text = frete.Percentual.ToString("P1");
+                totalLabel.Text = frete.Total.ToString("C");
+
+            }
+        
             else
-                MessageBox.Show(string.Join(Environment.NewLine,erros),
+        {
+                MessageBox.Show(string.Join(Environment.NewLine, erros),
                     "Validação",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-        }
-
-        private void Calcular()
-        {
-            var percentual = 0m;
-            var valor = Convert.ToDecimal(valorTextBox.Text);
-
-            switch (ufComboBox.Text.ToUpper())
-            {
-                case "SP":
-                    percentual = 0.2m;
-                    break;
-                case "RJ":
-                    percentual = 0.3m;
-                    break;
-                case "MG":
-                    percentual = 0.35m;
-                    break;
-                case "AM":
-                    percentual = 0.6m;
-                    break;
-                default:
-                    percentual = 0.75m;
-                    break;
             }
-
-            freteTextBox.Text = percentual.ToString("P1");
-            totalLabel.Text = ((percentual * valor)+ valor).ToString("C");
         }
 
-        
         private List<string> ValidarFormulario()
         {
             var erros = new List<string>();
