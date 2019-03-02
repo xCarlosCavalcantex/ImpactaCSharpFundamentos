@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Oficina.Dominio;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharp.Cap12.ValorReferencia.Test
 {
@@ -15,6 +17,12 @@ namespace CSharp.Cap12.ValorReferencia.Test
             Transformar(x);
 
             Assert.AreEqual(x, 1);
+
+            var y = x;
+
+            ++x;
+
+            Assert.AreEqual(y, 1);
         }
 
         [TestMethod]
@@ -26,6 +34,13 @@ namespace CSharp.Cap12.ValorReferencia.Test
             Transformar(veiculo);
 
             Assert.AreEqual(veiculo.Placa, "ABC1234");
+
+            var outroVeiculo = veiculo;
+
+            veiculo.Ano = 2019;
+            
+
+            Assert.AreEqual(outroVeiculo.Ano, 2019);
 
         }
 
@@ -51,7 +66,20 @@ namespace CSharp.Cap12.ValorReferencia.Test
             Assert.IsTrue(cliente.Id == 1);
         }
 
+        [TestMethod]
+        public void ListaTeste()
+        {
+            var inteiros = new List<int>() {1,9,2,5 };
 
+            Transformar(inteiros);
+
+            var primeiro = inteiros.First();
+        }
+
+        private void Transformar(List<int> inteiros)
+        {
+            inteiros.Clear();
+        }
 
         private void Transformar(Cliente cliente)
         {

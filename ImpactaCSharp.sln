@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Valida", "Impacta.V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cap12.ValorReferencia.Test", "CSharp.Cap12.ValorReferencia.Test\CSharp.Cap12.ValorReferencia.Test.csproj", "{5F4E1DC1-3D8A-463D-BD4D-AB698C23544B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SqlServer", "Oficina.Repositorios.SqlServer\Oficina.Repositorios.SqlServer.csproj", "{7181407B-D2F9-43A7-9868-7FC95C4A0286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SqlServerTests", "Oficina.Repositorios.SqlServerTests\Oficina.Repositorios.SqlServerTests.csproj", "{9628E69F-21C4-4524-B23C-2D43AA946626}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +96,14 @@ Global
 		{5F4E1DC1-3D8A-463D-BD4D-AB698C23544B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4E1DC1-3D8A-463D-BD4D-AB698C23544B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F4E1DC1-3D8A-463D-BD4D-AB698C23544B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7181407B-D2F9-43A7-9868-7FC95C4A0286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7181407B-D2F9-43A7-9868-7FC95C4A0286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7181407B-D2F9-43A7-9868-7FC95C4A0286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7181407B-D2F9-43A7-9868-7FC95C4A0286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9628E69F-21C4-4524-B23C-2D43AA946626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9628E69F-21C4-4524-B23C-2D43AA946626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9628E69F-21C4-4524-B23C-2D43AA946626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9628E69F-21C4-4524-B23C-2D43AA946626}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +114,7 @@ Global
 		{772C25A7-D64A-4430-9E3D-6F2D15606094} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 		{FFD80DFF-ED1D-4644-A6D0-9EBEBE25E10A} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 		{3B124E04-B20F-4F81-BA00-912A576D5F92} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
+		{7181407B-D2F9-43A7-9868-7FC95C4A0286} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
+		{9628E69F-21C4-4524-B23C-2D43AA946626} = {F0D2EF6F-0830-481A-9FAE-B27463A3A1F8}
 	EndGlobalSection
 EndGlobal

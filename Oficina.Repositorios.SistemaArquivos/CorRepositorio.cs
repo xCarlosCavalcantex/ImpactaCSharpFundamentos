@@ -11,9 +11,24 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     // ToDo: OO - Polimorfismo
 
-    public class CorRepositorio
+    public class CorRepositorio : ICorRepositorio
     {
         private string caminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];
+
+        public void Atualizar(Cor cor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Inserir(Cor cor)
+        {
+            throw new NotImplementedException();
+        }
 
         public List<Cor> Selecionar()
         {

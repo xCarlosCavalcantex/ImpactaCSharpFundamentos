@@ -29,7 +29,7 @@ namespace Oficina.WinForm
             marcaComboBox.ValueMember = "Id";
             marcaComboBox.SelectedIndex = -1;
 
-            corComboBox.DataSource = new CorRepositorio().Selecionar();
+            corComboBox.DataSource = new Oficina.Repositorios.SqlServer.CorRepositorio().Selecionar();
             corComboBox.DisplayMember = "Nome";
             corComboBox.ValueMember = "Id";
             corComboBox.SelectedIndex = -1;
