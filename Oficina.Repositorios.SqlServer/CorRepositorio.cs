@@ -10,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SqlServer
 {
-    public class CorRepositorio : ICorRepositorio
+    public class CorRepositorio : RepositorioBase , ICorRepositorio
     {
-        private string stringConexao = ConfigurationManager.ConnectionStrings["oficinaSqlServer"].ConnectionString;
         public void Atualizar(Cor cor)
         {
             throw new NotImplementedException();
@@ -32,7 +31,7 @@ namespace Oficina.Repositorios.SqlServer
         {
             var cores = new List<Cor>();
 
-            var conexao = new SqlConnection(stringConexao); //Conecta
+            var conexao = new SqlConnection(StringConexao); //Conecta
 
             conexao.Open(); //Abre Conexão
 
@@ -74,7 +73,7 @@ namespace Oficina.Repositorios.SqlServer
         {
             Cor cor = null;
 
-            using (var conexao = new SqlConnection(stringConexao))
+            using (var conexao = new SqlConnection(StringConexao))
             {
                 conexao.Open();
 
